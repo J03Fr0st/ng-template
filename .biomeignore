@@ -1,0 +1,16 @@
+# Angular HTML templates with interpolation syntax
+*.html
+src/**/*.html
+app.html
+
+# Build outputs
+dist/
+.angular/
+coverage/
+
+# Dependencies
+node_modules/
+
+# Generated files
+CHANGELOG.md
+

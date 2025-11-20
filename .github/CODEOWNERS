@@ -1,0 +1,18 @@
+# This file defines code ownership for automatic review requests
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo
+*       @YOUR_USERNAME
+
+# GitHub Actions workflows
+/.github/workflows/    @YOUR_USERNAME
+
+# Configuration files
+*.json    @YOUR_USERNAME
+*.yml     @YOUR_USERNAME
+*.yaml    @YOUR_USERNAME
+
+# Documentation
+*.md      @YOUR_USERNAME
+/docs/    @YOUR_USERNAME
+

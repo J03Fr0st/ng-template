@@ -1,0 +1,9 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📚 Documentation
+    url: https://github.com/YOUR_USERNAME/ng-template/blob/main/README.md
+    about: Check out the project documentation
+  - name: 💬 Discussions
+    url: https://github.com/YOUR_USERNAME/ng-template/discussions
+    about: Ask questions and discuss with the community
+
