@@ -1,59 +1,153 @@
-# NgTemplate
+# Angular Admin Dashboard Template
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.
+Modern Angular admin dashboard template built with Angular 21,Biome, and DaisyUI.
 
-## Development server
+## ✨ Features
 
-To start a local development server, run:
+### Core Technologies
+- **Angular 21** - Latest Angular with standalone components and Signals
+- **Vite** - Fast build tool with HMR (Hot Module Replacement)
+- **TypeScript 5.9** - Type-safe development
+- **Tailwind CSS 3.4** - Utility-first CSS framework
+- **DaisyUI 4.12** - Beautiful component library with 20+ themes
+- **Biome** - Fast linter and formatter
 
-```bash
-ng serve
-```
+### Admin Dashboard Features
+- 📊 **Advanced Data Tables** - Sorting, filtering, pagination, and CSV export
+- 📝 **Reactive Forms** - Complex forms with validation
+- 🎨 **Multiple Themes** - 20+ DaisyUI themes with dark mode support
+- 📱 **Responsive Design** - Mobile-first responsive layout
+- 🔐 **State Management** - Angular Signals + Services pattern
+- ⚡ **Performance** - Lazy loading and optimized builds
+- ♿ **Accessibility** - WCAG compliant components
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🚀 Getting Started
 
-## Code scaffolding
+### Prerequisites
+- Node.js 20.x or later
+- npm, yarn, or pnpm
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Installation
 
 ```bash
-ng test
+# Install dependencies
+npm install
+
+# Start development server
+npm run start
 ```
 
-## Running end-to-end tests
+The application will be available at `http://localhost:4200`
 
-For end-to-end (e2e) testing, run:
+## 📦 Available Scripts
 
 ```bash
-ng e2e
+# Development
+npm run start          # Start Vite dev server with HMR
+
+# Production
+npm run build        # Build for production
+npm run preview      # Preview production build locally
+
+# Testing
+npm test             # Run Jest tests
+npm run test:watch   # Run tests in watch mode
+npm run test:coverage # Generate coverage report
+
+# Code Quality
+npm run lint         # Run Biome linter
+npm run format       # Format code with Biome
+npm run check        # Lint and format code
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🏗️ Project Structure
 
-## Additional Resources
+```
+src/
+├── app/
+│   ├── core/                 # Singleton services, guards
+│   │   └── services/
+│   │       ├── theme.service.ts       # Theme management with Signals
+│   │       ├── sidebar.service.ts     # Sidebar state management
+│   │       └── mock-data.service.ts   # Mock API data service
+│   ├── features/             # Feature modules (lazy-loaded)
+│   │   ├── dashboard/        # Dashboard page with stats
+│   │   ├── tables/           # Advanced data tables
+│   │   └── forms/            # Form examples
+│   ├── layouts/              # Layout components
+│   │   ├── admin-layout/     # Main admin layout
+│   │   ├── sidebar/          # Responsive sidebar
+│   │   └── navbar/           # Top navigation bar
+│   ├── shared/               # Reusable components
+│   │   └── components/
+│   │       ├── card/         # Card wrapper component
+│   │       ├── stat-card/    # Statistics card
+│   │       └── loading-spinner/ # Loading indicator
+│   ├── models/               # TypeScript interfaces
+│   ├── app.component.ts      # Root component
+│   └── app.routes.ts         # Application routes
+├── environments/             # Environment configurations
+├── styles.css                # Global styles with Tailwind
+└── main.ts                   # Application bootstrap
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🎨 Theming
+
+The template comes with 20+ built-in DaisyUI themes:
+- Light (default), Dark
+- Cupcake, Bumblebee, Emerald, Corporate
+- Synthwave, Retro, Cyberpunk
+- Valentine, Halloween, Garden, Forest
+- Aqua, Lofi, Pastel, Fantasy
+- Wireframe, Black, Luxury, Dracula
+
+### Changing Themes
+
+Themes can be changed via the theme selector in the navbar or programmatically:
+
+```typescript
+import { ThemeService } from '@core/services/theme.service';
+
+constructor(private themeService: ThemeService) {}
+
+changeTheme() {
+  this.themeService.setTheme('dark');
+}
+```
+
+## 🧪 Testing
+
+The project uses Jest for testing with full Angular support.
+
+```bash
+npm test              # Run all tests
+npm run test:watch    # Watch mode
+npm run test:coverage # Coverage report
+```
+
+## 📊 Components
+
+### Dashboard
+Stats cards, recent activity, quick actions, system status
+
+### Data Tables
+Column sorting, search/filter, pagination, CSV export
+
+### Forms
+Reactive forms with validation, custom validators, multiple input types
+
+## 🚢 Deployment
+
+```bash
+npm run build
+```
+
+Build artifacts will be in `dist/` directory.
+
+## 📝 License
+
+MIT License - see LICENSE file for details
+
+---
+
+Built with ❤️ using Angular 20 and modern web technologies
