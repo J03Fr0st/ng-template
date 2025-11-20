@@ -1,0 +1,39 @@
+<!-- htmlhint doctype-first:false -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+  @for (stat of stats(); track stat.title) {
+    <app-stat-card [stat]="stat"></app-stat-card>
+  }
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+  <app-card>
+    <h2 class="card-title mb-4">Recent Activity</h2>
+    <div class="overflow-x-auto">
+      <ul class="steps steps-vertical">
+        <li class="step step-primary">Register</li>
+        <li class="step step-primary">Choose plan</li>
+        <li class="step">Purchase</li>
+        <li class="step">Receive Product</li>
+      </ul>
+    </div>
+  </app-card>
+
+  <app-card>
+    <h2 class="card-title mb-4">System Status</h2>
+    <div class="flex flex-col gap-4">
+      <div class="flex items-center justify-between">
+        <span>Server Load</span>
+        <progress class="progress progress-primary w-56" value="70" max="100"></progress>
+      </div>
+      <div class="flex items-center justify-between">
+        <span>Disk Usage</span>
+        <progress class="progress progress-warning w-56" value="85" max="100"></progress>
+      </div>
+      <div class="flex items-center justify-between">
+        <span>Bandwidth</span>
+        <progress class="progress progress-success w-56" value="40" max="100"></progress>
+      </div>
+    </div>
+  </app-card>
+</div>
+

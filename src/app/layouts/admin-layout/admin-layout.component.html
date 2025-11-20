@@ -1,0 +1,17 @@
+<!-- htmlhint doctype-first:false -->
+<div class="drawer lg:drawer-open">
+  <input
+    id="my-drawer-2"
+    type="checkbox"
+    class="drawer-toggle"
+    [checked]="sidebarService.isOpen()"
+    (change)="toggleSidebar($event)" />
+  <div class="drawer-content flex flex-col bg-base-200 min-h-screen">
+    <app-navbar></app-navbar>
+    <main class="flex-1 p-6">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+  <app-sidebar></app-sidebar>
+</div>
+

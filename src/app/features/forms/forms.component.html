@@ -1,0 +1,75 @@
+<!-- htmlhint doctype-first:false -->
+<div class="max-w-2xl mx-auto">
+  <app-card>
+    <h2 class="card-title mb-6">User Registration</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="space-y-4">
+      <div class="form-control w-full">
+        <label class="label">
+          <span class="label-text">Full Name</span>
+        </label>
+        <input
+          type="text"
+          placeholder="John Doe"
+          formControlName="name"
+          class="input input-bordered w-full"
+          [class.input-error]="form.get('name')?.invalid && form.get('name')?.touched" />
+        @if (form.get('name')?.invalid && form.get('name')?.touched) {
+          <label class="label">
+            <span class="label-text-alt text-error">Name is required (min 3 chars)</span>
+          </label>
+        }
+      </div>
+
+      <div class="form-control w-full">
+        <label class="label">
+          <span class="label-text">Email</span>
+        </label>
+        <input
+          type="email"
+          placeholder="john@example.com"
+          formControlName="email"
+          class="input input-bordered w-full"
+          [class.input-error]="form.get('email')?.invalid && form.get('email')?.touched" />
+        @if (form.get('email')?.invalid && form.get('email')?.touched) {
+          <label class="label">
+            <span class="label-text-alt text-error">Please enter a valid email</span>
+          </label>
+        }
+      </div>
+
+      <div class="form-control w-full">
+        <label class="label">
+          <span class="label-text">Role</span>
+        </label>
+        <select formControlName="role" class="select select-bordered">
+          <option disabled selected value="">Pick a role</option>
+          <option value="admin">Admin</option>
+          <option value="user">User</option>
+          <option value="editor">Editor</option>
+        </select>
+      </div>
+
+      <div class="form-control">
+        <label class="label cursor-pointer justify-start gap-4">
+          <input type="checkbox" formControlName="terms" class="checkbox checkbox-primary" />
+          <span class="label-text">I accept the terms and conditions</span>
+        </label>
+        @if (form.get('terms')?.invalid && form.get('terms')?.touched) {
+          <label class="label">
+            <span class="label-text-alt text-error">You must accept the terms</span>
+          </label>
+        }
+      </div>
+
+      <div class="card-actions justify-end mt-6">
+        <button type="submit" class="btn btn-primary" [disabled]="form.invalid || form.pristine">
+          @if (isSubmitting) {
+            <span class="loading loading-spinner"></span>
+          }
+          Submit
+        </button>
+      </div>
+    </form>
+  </app-card>
+</div>
+

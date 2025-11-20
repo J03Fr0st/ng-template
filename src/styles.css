@@ -1,2 +1,24 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@import "daisyui/theme/light";
+@import "daisyui/theme/dark";
+@import "daisyui/theme/cupcake";
+@import "daisyui/theme/bumblebee";
+@import "daisyui/theme/emerald";
+@import "daisyui/theme/corporate";
+@import "daisyui/theme/synthwave";
+@import "daisyui/theme/retro";
+@import "daisyui/theme/cyberpunk";
+@import "daisyui/theme/valentine";
+@import "daisyui/theme/halloween";
+@import "daisyui/theme/garden";
+@import "daisyui/theme/forest";
+@import "daisyui/theme/aqua";
+@import "daisyui/theme/lofi";
+@import "daisyui/theme/pastel";
+@import "daisyui/theme/fantasy";
+@import "daisyui/theme/wireframe";
+@import "daisyui/theme/black";
+@import "daisyui/theme/luxury";
+@import "daisyui/theme/dracula";
